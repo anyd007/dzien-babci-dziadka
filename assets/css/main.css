@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+.container {
+  position: relative;
+  cursor: pointer;
+  margin: 3rem auto;
+  width: 100vw;
+  height: 50vh;
+  background: lightblue;
+}
+.container::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  background: tomato;
+  opacity: 0.8;
+  transition: all 0.7s ease-in-out;
+}
+.container::after {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 100%;
+  right: 0%;
+  top: 0%;
+  background: lightpink;
+  opacity: 0.8;
+  transition: all 0.5s ease-in-out;
+}
+.container.active::before, .container.active::after {
+  width: 0%;
+}/*# sourceMappingURL=main.css.map */
