@@ -1,0 +1,66 @@
+.hero {
+    background: #55d6c2;
+    width: 100vw;
+    height: auto;
+    max-width: 100%;
+    padding: 2rem 0;
+
+    &__title {
+        padding: 2rem 0;
+        text-align: center;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+    }
+
+    &__wish-container {
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        width: 80%;
+        height: auto;
+        overflow: hidden;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 50%;
+            height: 100%;
+            left: 0%;
+            top: 0%;
+            background: #dfb2f4;
+            transition: all 0.7s ease-in-out;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 50%;
+            height: 100%;
+            right: 0%;
+            top: 0%;
+            background: #f5e960;
+            transition: all 0.5s ease-in-out;
+        }
+        &.open::before, &.open::after{
+            width: 0%;
+        }
+
+        &--info{
+            position: absolute;
+            z-index: 3;
+            top: 15%;
+            left: 50%;
+            font-size: 1.5rem;
+            font-weight: bold;
+            transform: translate(-50%);
+            transition: all 0.5s ease-in-out;
+        }
+        &--info.open{
+            opacity: 0;
+            z-index: -1;
+        }
+        &--text {
+            font-size: 1.5rem;
+        }
+    }
+}
