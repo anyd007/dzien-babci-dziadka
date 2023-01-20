@@ -119,6 +119,12 @@ header .header__scrool-icon {
     }
   }
 }
+@media (max-width: 600px) {
+  header::before {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
 .hero {
   background: #55d6c2;
   width: 100vw;
