@@ -6,7 +6,11 @@ const btns = [...document.querySelectorAll(".btns")]
 const modalContainer = document.querySelector(".modal-container")
 const modalImg = document.querySelector(".modal-img")
 const closeModal = document.querySelector(".modal-icon")
-const galleryImagines = [...document.querySelectorAll(".gallery__images")]
+const galleryImagines = document.querySelectorAll(".gallery__images")
+const prevSlide = document.querySelector(".prev-slide")
+const nextSlide = document.querySelector(".next-slide")
+
+let counter = 0
 
 btns.forEach((btn, btnIndex) => {
     btn.addEventListener("click", () => {
@@ -15,16 +19,10 @@ btns.forEach((btn, btnIndex) => {
                 modalImg.src = img.src
                 modalContainer.classList.add("open")
                 document.body.classList.add("stopScroll")
+                prevSlide.style.display = "none"
+                nextSlide.style.display = "none"
             }
         })
-    })
-})
-
-galleryImagines.forEach(imagine =>{
-    imagine.addEventListener("click", () =>{
-        modalImg.src = imagine.src
-        modalContainer.classList.add("open")
-        document.body.classList.add("stopScroll")
     })
 })
 
@@ -33,8 +31,38 @@ imgs.forEach(img => {
         modalImg.src = img.src
         modalContainer.classList.add("open")
         document.body.classList.add("stopScroll")
+        prevSlide.style.display = "none"
+        nextSlide.style.display = "none"
     })
 })
+
+galleryImagines.forEach((imagine, index) => {
+    imagine.addEventListener("click", () => {
+        modalImg.src = imagine.src
+        counter = index
+        modalContainer.classList.add("open")
+        document.body.classList.add("stopScroll")
+        prevSlide.style.display = "block"
+        nextSlide.style.display = "block"
+        
+    })
+})
+
+const nextGallertPic = () =>{
+    if(counter >= galleryImagines.length -1){
+        counter = -1;
+    }
+    counter++;
+    modalImg.src = galleryImagines[counter].src
+}
+
+const prevGalleryPic = () =>{
+    if(counter <= 0 ){
+        counter = galleryImagines.length
+    }
+    counter--
+    modalImg.src = galleryImagines[counter].src
+}
 
 const showGift = () => {
     container.classList.add("open")
@@ -49,3 +77,5 @@ const hideModal = () => {
 
 container.addEventListener("click", showGift)
 closeModal.addEventListener("click", hideModal)
+nextSlide.addEventListener("click", nextGallertPic)
+prevSlide.addEventListener("click", prevGalleryPic)

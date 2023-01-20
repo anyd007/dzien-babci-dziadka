@@ -19,23 +19,34 @@
 
     .modal-img{
         position: absolute;
-        width: 80%;
-        height: auto;
+        width: auto;
+        height: 100%;
         left: 50%;
         transform: translate(-50%);
-        top: 5%;
-       
-
     }
 
     .modal-icon{
         position: absolute;
         left: 50%;
         transform: translate(-50%);
-        top: 2%;
+        top: 3%;
         z-index: 6;
-        font-size: 3rem;
+        font-size: 3.5rem;
         color: tomato;
         cursor: pointer;
+    }
+
+    .cursor{
+        position: absolute;
+        font-size: 3rem;
+        color: #fff;
+        top: 50%;
+        cursor: pointer;
+    }
+    .next-slide{
+        right: 5%;
+    }
+    .prev-slide{
+        left: 5%;
     }
 }

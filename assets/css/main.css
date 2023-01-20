@@ -298,21 +298,33 @@ header .header__scrool-icon {
 }
 .modal-container .modal-img {
   position: absolute;
-  width: 80%;
-  height: auto;
+  width: auto;
+  height: 100%;
   left: 50%;
   transform: translate(-50%);
-  top: 5%;
 }
 .modal-container .modal-icon {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  top: 2%;
+  top: 3%;
   z-index: 6;
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: tomato;
   cursor: pointer;
+}
+.modal-container .cursor {
+  position: absolute;
+  font-size: 3rem;
+  color: #fff;
+  top: 50%;
+  cursor: pointer;
+}
+.modal-container .next-slide {
+  right: 5%;
+}
+.modal-container .prev-slide {
+  left: 5%;
 }
 
 .gallery-container {
