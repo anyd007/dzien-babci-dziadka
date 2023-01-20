@@ -107,5 +107,13 @@ header{
         &::before{
         animation: none;
         }
+
+        .header__title{
+            font-size: 1.3rem;
+        }
+
+        .header__scrool-icon{
+            font-size: 2rem;
+        }
     }
 }

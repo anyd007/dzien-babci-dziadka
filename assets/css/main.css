@@ -124,6 +124,12 @@ header .header__scrool-icon {
     -webkit-animation: none;
             animation: none;
   }
+  header .header__title {
+    font-size: 1.3rem;
+  }
+  header .header__scrool-icon {
+    font-size: 2rem;
+  }
 }
 .hero {
   background: #55d6c2;
@@ -251,6 +257,21 @@ header .header__scrool-icon {
   cursor: pointer;
 }
 
+@media (max-width: 600px) {
+  .hero__title {
+    font-size: 1.3em;
+  }
+  .hero__wish-container {
+    width: 90%;
+  }
+  .hero__wish-container--text {
+    font-size: 1rem;
+  }
+  .hero__wish-container .gifts {
+    flex-direction: column;
+    width: 100%;
+  }
+}
 .modal-container {
   display: none;
   position: fixed;

@@ -1,3 +1,5 @@
+@import './config';
+
 .hero {
     background: #55d6c2;
     width: 100vw;
@@ -143,5 +145,27 @@
                 }
             }
         }
+    }
+}
+
+@include screen(phones){
+    .hero{
+
+        &__title{
+            font-size: 1.3em;
+        }
+
+        &__wish-container{
+            width: 90%;
+            
+            &--text{
+                font-size: 1rem;
+            }
+        
+        
+            .gifts{
+                flex-direction: column;
+                width: 100%;
+            }}
     }
 }
