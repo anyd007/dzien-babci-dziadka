@@ -8,7 +8,7 @@
     height: 100%;
     z-index: 4;
     background: #444;
-    opacity: 0.9;
+    // opacity: 0.9;
     overflow-y: scroll;
     overflow-x: hidden;
     white-space: nowrap;
@@ -19,7 +19,7 @@
 
     .modal-img{
         position: absolute;
-        width: 90%;
+        width: 80%;
         height: auto;
         left: 50%;
         transform: translate(-50%);

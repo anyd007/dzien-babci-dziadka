@@ -289,7 +289,6 @@ header .header__scrool-icon {
   height: 100%;
   z-index: 4;
   background: #444;
-  opacity: 0.9;
   overflow-y: scroll;
   overflow-x: hidden;
   white-space: nowrap;
@@ -299,7 +298,7 @@ header .header__scrool-icon {
 }
 .modal-container .modal-img {
   position: absolute;
-  width: 90%;
+  width: 80%;
   height: auto;
   left: 50%;
   transform: translate(-50%);
@@ -316,6 +315,43 @@ header .header__scrool-icon {
   cursor: pointer;
 }
 
+.gallery-container {
+  background: #f5e960;
+  padding: 20px 0;
+}
+.gallery-container__title {
+  text-align: center;
+  font-size: 3rem;
+}
+.gallery-container .gallery {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+}
+.gallery-container .gallery__images {
+  width: 50%;
+  height: auto;
+  cursor: pointer;
+  -o-object-fit: contain;
+     object-fit: contain;
+  box-shadow: 2px 2px 20px #000;
+  border-radius: 10px;
+}
+
+@media (max-width: 992px) {
+  .gallery-container__title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 769px) {
+  .gallery-container .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0%;

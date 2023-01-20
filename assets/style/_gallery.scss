@@ -1,0 +1,48 @@
+@import './config';
+
+.gallery-container{
+    background: #f5e960;
+    padding: 20px 0;
+
+    &__title{
+       
+        text-align: center;
+        font-size: 3rem;
+    }
+.gallery{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+
+    &__images{
+        width: 50%;
+        height: auto;
+        cursor: pointer;
+        object-fit: contain;
+        box-shadow: 2px 2px 20px #000;
+        border-radius: 10px;
+    }
+}
+}
+
+@include screen(laptops){
+    .gallery-container{
+
+        &__title{
+            font-size: 2rem;
+        }
+    }
+}
+@include screen(tablets){
+    .gallery-container{
+
+        .gallery{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

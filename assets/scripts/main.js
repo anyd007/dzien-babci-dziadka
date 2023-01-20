@@ -6,6 +6,7 @@ const btns = [...document.querySelectorAll(".btns")]
 const modalContainer = document.querySelector(".modal-container")
 const modalImg = document.querySelector(".modal-img")
 const closeModal = document.querySelector(".modal-icon")
+const galleryImagines = [...document.querySelectorAll(".gallery__images")]
 
 btns.forEach((btn, btnIndex) => {
     btn.addEventListener("click", () => {
@@ -16,6 +17,14 @@ btns.forEach((btn, btnIndex) => {
                 document.body.classList.add("stopScroll")
             }
         })
+    })
+})
+
+galleryImagines.forEach(imagine =>{
+    imagine.addEventListener("click", () =>{
+        modalImg.src = imagine.src
+        modalContainer.classList.add("open")
+        document.body.classList.add("stopScroll")
     })
 })
 
