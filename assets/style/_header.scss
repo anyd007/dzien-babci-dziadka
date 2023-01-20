@@ -76,11 +76,28 @@ header{
 @include screen(laptops){
     header{
         &::before{
-            background-position: 35%;
+            background-position: 40% 25%;
         }
 
         .header__title{
             font-size: 3rem;
         }
     }
+}
+@include screen(tablets){
+    header{
+        &::before{
+            background-position: 40% 25%;
+        }
+    }
+    @keyframes zoom {
+        from{
+            transform: scale(1);
+        }
+        to{
+            transform: scale(1.3);
+           
+        }
+    }
+
 }
