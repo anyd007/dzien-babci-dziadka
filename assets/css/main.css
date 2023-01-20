@@ -346,6 +346,10 @@ header .header__scrool-icon {
 }
 
 @media (max-width: 769px) {
+  .modal-container .modal-img {
+    width: 100%;
+    height: auto;
+  }
   .modal-container .cursor {
     font-size: 4rem;
   }
