@@ -94,6 +94,12 @@
 
         &--text {
             font-size: 1.5rem;
+
+            .text-effect{
+                color: red;
+                display: inline-block;
+                animation: effect 3s infinite ease-in-out;
+            }
         }
 
         .gifts {
@@ -145,6 +151,11 @@
                 }
             }
         }
+    }
+}
+@keyframes effect{
+    50%{
+        transform: scale(1.1);
     }
 }
 

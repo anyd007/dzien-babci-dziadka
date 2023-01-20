@@ -219,6 +219,12 @@ header .header__scrool-icon {
 .hero__wish-container--text {
   font-size: 1.5rem;
 }
+.hero__wish-container--text .text-effect {
+  color: red;
+  display: inline-block;
+  -webkit-animation: effect 3s infinite ease-in-out;
+          animation: effect 3s infinite ease-in-out;
+}
 .hero__wish-container .gifts {
   align-items: center;
   justify-content: center;
@@ -259,6 +265,17 @@ header .header__scrool-icon {
   cursor: pointer;
 }
 
+@-webkit-keyframes effect {
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes effect {
+  50% {
+    transform: scale(1.1);
+  }
+}
 @media (max-width: 600px) {
   .hero__title {
     font-size: 1.3em;
@@ -319,6 +336,7 @@ header .header__scrool-icon {
   color: #fff;
   top: 50%;
   cursor: pointer;
+  z-index: 10;
 }
 .modal-container .next-slide {
   right: 5%;
@@ -327,6 +345,11 @@ header .header__scrool-icon {
   left: 5%;
 }
 
+@media (max-width: 769px) {
+  .modal-container .cursor {
+    font-size: 4rem;
+  }
+}
 .gallery-container {
   background: #f5e960;
   padding: 20px 0;
