@@ -40,12 +40,11 @@ header{
 
     .header__scrool-icon{
         position: absolute;
-        left: 50%;
-        transform: translate(-50%);
+       right: 2rem;
         color: #fff;
         font-size: 3rem;
         cursor: pointer;
-        bottom: 2.5rem;
+        bottom: 3rem;
     }
     @keyframes zoom {
         from{
