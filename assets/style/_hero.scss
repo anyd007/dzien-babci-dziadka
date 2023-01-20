@@ -157,11 +157,18 @@
 
         &__wish-container{
             width: 90%;
-            
+
+            &--img {
+                top: 10%;
+            }
+            &--btn{
+                width: 90%;
+            }
+
             &--text{
                 font-size: 1rem;
             }
-        
+            
         
             .gifts{
                 flex-direction: column;

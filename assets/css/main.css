@@ -123,6 +123,7 @@ header .header__scrool-icon {
   header::before {
     -webkit-animation: none;
             animation: none;
+    background-position: 42% 25%;
   }
   header .header__title {
     font-size: 1.3rem;
@@ -262,6 +263,12 @@ header .header__scrool-icon {
     font-size: 1.3em;
   }
   .hero__wish-container {
+    width: 90%;
+  }
+  .hero__wish-container--img {
+    top: 10%;
+  }
+  .hero__wish-container--btn {
     width: 90%;
   }
   .hero__wish-container--text {
