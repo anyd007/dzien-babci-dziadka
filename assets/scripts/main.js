@@ -7,10 +7,10 @@ const modalContainer = document.querySelector(".modal-container")
 const modalImg = document.querySelector(".modal-img")
 const closeModal = document.querySelector(".modal-icon")
 
-btns.forEach((btn, btnIndex) =>{
-    btn.addEventListener("click", () =>{
-        imgs.forEach((img, imgIndex) =>{
-            if(btnIndex === imgIndex){
+btns.forEach((btn, btnIndex) => {
+    btn.addEventListener("click", () => {
+        imgs.forEach((img, imgIndex) => {
+            if (btnIndex === imgIndex) {
                 modalImg.src = img.src
                 modalContainer.classList.add("open")
                 document.body.classList.add("stopScroll")
@@ -19,13 +19,21 @@ btns.forEach((btn, btnIndex) =>{
     })
 })
 
-const showGift = () =>{
+imgs.forEach(img => {
+    img.addEventListener("click", () => {
+        modalImg.src = img.src
+        modalContainer.classList.add("open")
+        document.body.classList.add("stopScroll")
+    })
+})
+
+const showGift = () => {
     container.classList.add("open")
     wishInstructionBtn.classList.add("open")
     giftBow.classList.add("open")
 }
 
-const hideModal = () =>{
+const hideModal = () => {
     modalContainer.classList.remove("open")
     document.body.classList.remove("stopScroll")
 }
