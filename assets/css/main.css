@@ -345,9 +345,18 @@ header .header__scrool-icon {
   left: 5%;
 }
 
+@media (max-width: 992px) {
+  .modal-container .modal-img {
+    width: 95%;
+    height: auto;
+  }
+  .modal-container .cursor {
+    font-size: 4rem;
+  }
+}
 @media (max-width: 769px) {
   .modal-container .modal-img {
-    width: 100%;
+    width: 95%;
     height: auto;
   }
   .modal-container .cursor {

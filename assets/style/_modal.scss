@@ -51,12 +51,24 @@
         left: 5%;
     }
 }
+@include screen(laptops){
+    .modal-container{
 
+        .modal-img{
+            width: 95%;
+            height: auto;
+        }
+
+        .cursor{
+            font-size: 4rem;
+        }
+    }
+}
 @include screen(tablets){
     .modal-container{
 
         .modal-img{
-            width: 100%;
+            width: 95%;
             height: auto;
         }
 
