@@ -25,10 +25,10 @@ header .header__title {
   opacity: 0;
   transform: scale(0);
   position: relative;
-  padding: 16rem 0;
+  padding: 14rem 0;
   text-align: center;
   text-transform: uppercase;
-  font-size: 3.8rem;
+  font-size: 4vw;
   color: #fff;
   text-shadow: 2px 2px 15px #000;
   -webkit-animation: show-text 2s 1s forwards ease-in-out, scale-text 5s 3s infinite linear;
@@ -95,7 +95,8 @@ header .header__scrool-icon {
     background-position: 40% 25%;
   }
   header .header__title {
-    font-size: 3rem;
+    font-size: 3.5vw;
+    padding: 12rem 0;
   }
 }
 @media (max-width: 769px) {
@@ -127,6 +128,7 @@ header .header__scrool-icon {
   }
   header .header__title {
     font-size: 1.3rem;
+    padding: 15rem 0;
   }
   header .header__scrool-icon {
     font-size: 2rem;
