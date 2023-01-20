@@ -128,6 +128,7 @@ header .header__scrool-icon {
   top: 0%;
   background: #dfb2f4;
   transition: all 0.7s ease-in-out;
+  z-index: 2;
 }
 .hero__wish-container::after {
   position: absolute;
@@ -138,6 +139,7 @@ header .header__scrool-icon {
   top: 0%;
   background: #f5e960;
   transition: all 0.5s ease-in-out;
+  z-index: 2;
 }
 .hero__wish-container.open::before, .hero__wish-container.open::after {
   width: 0%;
@@ -167,9 +169,10 @@ header .header__scrool-icon {
   z-index: -1;
 }
 .hero__wish-container--img {
+  top: 50%;
   position: absolute;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
   z-index: 3;
   bottom: 0%;
   transition: all 0.5s ease-in-out;
@@ -183,9 +186,69 @@ header .header__scrool-icon {
 }
 .hero__wish-container .gifts {
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   display: flex;
+}
+.hero__wish-container .gifts__grandma--img {
+  width: 100%;
+  height: auto;
+  padding: 2px;
+}
+.hero__wish-container .gifts__grandma--btn {
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+  padding: 5px 15px;
+  border-radius: 10px;
+  background: #fb6f92;
+  box-shadow: 2px 2px 15px #444;
+  opacity: 0.8;
+  transition: all 0.5s ease-in-out;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1;
+}
+.hero__wish-container .gifts__grandpa--img {
+  width: 100%;
+  height: auto;
+  padding: 2px;
+}
+
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background: #444;
+  opacity: 0.9;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+.modal-container.open {
+  display: block;
+}
+.modal-container .modal-img {
+  position: absolute;
+  width: 90%;
+  height: auto;
+  left: 50%;
+  transform: translate(-50%);
+  top: 5%;
+}
+.modal-container .modal-icon {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 2%;
+  z-index: 6;
+  font-size: 3rem;
+  color: tomato;
+  cursor: pointer;
 }
 
 * {
@@ -193,4 +256,8 @@ header .header__scrool-icon {
   margin: 0%;
   padding: 0%;
   font-family: "Gloria Hallelujah", cursive;
+}
+
+.stopScroll {
+  overflow: hidden;
 }/*# sourceMappingURL=main.css.map */

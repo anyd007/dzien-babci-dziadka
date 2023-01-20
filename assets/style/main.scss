@@ -1,8 +1,12 @@
-@import './header', './hero', './config';
+@import './header', './hero', './config', './modal';
 
 *{
     box-sizing: border-box;
     margin: 0%;
     padding: 0%;
     font-family: 'Gloria Hallelujah', cursive;
+}
+
+.stopScroll{
+    overflow: hidden;
 }

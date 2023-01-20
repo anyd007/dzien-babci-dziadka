@@ -29,6 +29,7 @@
             top: 0%;
             background: #dfb2f4;
             transition: all 0.7s ease-in-out;
+            z-index: 2;
         }
 
         &::after {
@@ -40,12 +41,15 @@
             top: 0%;
             background: #f5e960;
             transition: all 0.5s ease-in-out;
+            z-index: 2;
         }
-        &.open::before, &.open::after{
+
+        &.open::before,
+        &.open::after {
             width: 0%;
         }
 
-        &--btn{
+        &--btn {
             cursor: pointer;
             position: absolute;
             padding: 10px 15px;
@@ -61,25 +65,26 @@
             transform: translate(-50%);
             transition: all 0.5s ease-in-out;
 
-            &:hover{
+            &:hover {
                 opacity: 1;
                 box-shadow: 2px 2px 15px 5px #444;
             }
         }
-        &--btn.open{
+
+        &--btn.open {
             opacity: 0;
             z-index: -1;
         }
 
-        &--img{
+        &--img {top: 50%;
             position: absolute;
             left: 50%;
-            transform: translate(-50%);
+            transform: translate(-50%, -50%);
             z-index: 3;
             bottom: 0%;
             transition: all 0.5s ease-in-out;
 
-            &.open{
+            &.open {
                 opacity: 0;
                 z-index: -1;
             }
@@ -89,12 +94,44 @@
             font-size: 1.5rem;
         }
 
-        .gifts{
+        .gifts {
             align-items: center;
-            justify-content: space-around;
+            justify-content: center;
             width: 100%;
             display: flex;
 
+            &__grandma {
+
+                &--img {
+                    width: 100%;
+                    height: auto;
+                    padding: 2px;
+                }
+
+                &--btn {
+                    text-decoration: none;
+                    color: #000;
+                    border: 1px solid #000;
+                    padding: 5px 15px;
+                    border-radius: 10px;
+                    background: #fb6f92;
+                    box-shadow: 2px 2px 15px #444;
+                    opacity: 0.8;
+                    transition: all 0.5s ease-in-out;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    z-index: 1;
+                }
+            }
+
+            &__grandpa {
+
+                &--img {
+                    width: 100%;
+                    height: auto;
+                    padding: 2px;
+                }
+            }
         }
     }
 }
