@@ -162,8 +162,10 @@ header .header__scrool-icon {
   left: 0%;
   top: 0%;
   background: #dfb2f4;
-  transition: all 0.7s ease-in-out;
+  transition: all 1s ease-in-out;
   z-index: 2;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+  border-radius: 0 15px 15px 0;
 }
 .hero__wish-container::after {
   position: absolute;
@@ -173,8 +175,10 @@ header .header__scrool-icon {
   right: 0%;
   top: 0%;
   background: #f5e960;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
   z-index: 2;
+  background-image: linear-gradient(to right, rgba(245, 233, 96, 0.2), rgba(0, 0, 0, 0.4));
+  border-radius: 15px 0 0 15px;
 }
 .hero__wish-container.open::before, .hero__wish-container.open::after {
   width: 0%;
