@@ -353,6 +353,9 @@ header .header__scrool-icon {
   .modal-container .modal-img {
     width: 95%;
     height: auto;
+    max-height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .modal-container .cursor {
     font-size: 4rem;
@@ -362,6 +365,9 @@ header .header__scrool-icon {
   .modal-container .modal-img {
     width: 95%;
     height: auto;
+    max-height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .modal-container .cursor {
     font-size: 4rem;
