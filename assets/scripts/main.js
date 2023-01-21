@@ -75,6 +75,26 @@ const hideModal = () => {
     document.body.classList.remove("stopScroll")
 }
 
+const options ={
+
+    threshold: 1.0,
+    rootMargin: "0px 0px 200px 0px",
+   }
+const apperOnScroll = new IntersectionObserver((entries, apperOnScroll)=>{
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return
+      }
+      document.querySelector("#img1").style.opacity = 1
+      apperOnScroll.unobserve(entry.target);
+     
+    })
+}, options);
+galleryImagines.forEach((galleryImage) => {
+apperOnScroll.observe(galleryImage);
+
+});
+
 container.addEventListener("click", showGift)
 closeModal.addEventListener("click", hideModal)
 nextSlide.addEventListener("click", nextGallertPic)

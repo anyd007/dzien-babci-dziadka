@@ -28,6 +28,10 @@
         border-radius: 10px;
     }
 }
+
+#img1{
+    opacity: 0;
+}
 }
 
 @include screen(laptops){
